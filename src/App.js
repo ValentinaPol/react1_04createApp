@@ -3,9 +3,12 @@ import React from 'react';
 import './App.css';
 
 function App() {
+  const divStyle = {
+    textAlign: 'center'
+  }
   return (
-    <div className="App">
-      <h1>Hello world!</h1>
+    <div style={divStyle}>
+      <h1 style={{color: 'blue', fontSize: '20px'}}>Hello world!</h1>
     </div>
   );
   /*return React.createElement(
