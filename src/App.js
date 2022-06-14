@@ -12,6 +12,7 @@ function App() {
       <h1>Hello world!</h1>
 
       <Car />
+      <Car />
     </div>
   );
   /*return React.createElement(
