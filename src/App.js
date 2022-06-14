@@ -1,6 +1,7 @@
 
 import React from 'react';
 import './App.css';
+import Car from './Car/Car';
 
 function App() {
   const divStyle = {
@@ -8,7 +9,9 @@ function App() {
   }
   return (
     <div style={divStyle}>
-      <h1 style={{color: 'blue', fontSize: '20px'}}>Hello world!</h1>
+      <h1>Hello world!</h1>
+
+      <Car />
     </div>
   );
   /*return React.createElement(
