@@ -1,4 +1,5 @@
 
+import { toHaveFocus } from '@testing-library/jest-dom/dist/matchers';
 import React, { Component } from 'react';
 import './App.css';
 import Car from './Car/Car';
@@ -16,7 +17,14 @@ class App extends Component {
   }
 
   changeTitleHandler = () => {
-    console.log('Clicked')
+    
+    const oldTitle = this.state.pageTitle
+
+    const newTitle = oldTitle + ' (changed)'
+
+    this.setState({
+      pageTitle: newTitle
+    })
   }
 
   render() {
@@ -42,40 +50,4 @@ class App extends Component {
 
 export default App;
 
-/*function App() {
-
-  React.state = {
-    cars: [
-      {name: "Ford", year: 2018},
-      {name: "Audi", year: 2016},
-      {name: "Mazda", year: 2010}
-    ]
-  }
-
-  const divStyle = {
-    textAlign: 'center'
-  }
-
-  const cars = React.state.cars
-
-  return (
-    <div style={divStyle}>
-      <h1>Hello world!</h1>
-
-      <Car  name={cars[0].name} year={cars[0].year} />
-      <Car  name={cars[1].name} year={cars[1].year} />
-      <Car  name={cars[2].name} year={cars[2].year} />
-    </div>
-  );
-  /*return React.createElement(
-    'div',
-    {
-      className: 'App'
-    },
-    React.createElement(
-      'h1',
-      null,
-      'Hello world!'
-    )
-  )
-}*/ //For 16 version
+ 
